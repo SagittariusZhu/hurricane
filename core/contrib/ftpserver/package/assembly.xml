@@ -1,0 +1,33 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <baseDirectory>ftpserver</baseDirectory>
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/lib</outputDirectory>
+            <unpack>false</unpack>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <directory>../package</directory>
+                <outputDirectory>/</outputDirectory>
+                <includes>
+                    <include>bin/*</include>
+                    <include>conf/*</include>
+                    <include>logs</include>
+                </includes>
+        </fileSet>
+        <fileSet>
+          <directory>../../dist</directory>
+          <outputDirectory>/lib</outputDirectory>
+          <includes>
+            <include>hu-ftp-server-*.jar</include>
+          </includes>
+        </fileSet>        
+    </fileSets>
+</assembly>

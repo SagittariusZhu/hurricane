@@ -1,0 +1,11 @@
+#
+# The client reads this property to create the reference to the
+# "SessionFactory" object in the server.
+#
+DataReceiver.Proxy=DataReceiver:tcp -h sr1 -p 11000
+
+#
+# Warn about connection exceptions
+#
+Ice.Warn.Connections=1
+Ice.MessageSizeMax=1000000000

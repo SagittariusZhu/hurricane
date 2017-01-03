@@ -1,0 +1,191 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="instances" class="clearfix">
+
+  <div id="frame">
+
+      <div id="actions" class="actions clearfix">
+      
+        <button id="add" class="action"><span>Add Instance</span></button>
+
+        <button id="delete" class="warn requires-instance"><span>Delete</span></button>
+
+        <button id="config" class="requires-instance"><span>Config</span></button>
+
+        <div class="action add" data-rel="add">
+
+          <form>
+
+            <input type="hidden" name="action" value="CREATE">
+
+            <p class="clearfix"><label for="add_name">name:</label>
+            <input type="text" name="name" id="add_name" value="new_source"></p>
+
+            <p class="clearfix"><label for="add_dbType">dbType:</label>
+            <input type="text" name="dbType" id="add_dbType" value="mysql"></p>
+
+            <p class="clearfix"><label for="add_server">server:</label>
+            <input type="text" name="server" id="add_server" value="localhost"></p>
+
+            <p class="clearfix"><label for="add_port">port:</label>
+            <input type="text" name="port" id="add_port" value="3306"></p>
+
+            <p class="clearfix"><label for="add_user">username:</label>
+            <input type="text" name="user" id="add_user" value="user"></p>
+
+            <p class="clearfix"><label for="add_pass">password:</label>
+            <input type="password" name="pass" id="add_pass" value="password"></p>
+
+            <p class="clearfix"><label for="add_mainTable">mainTable:</label>
+            <input type="text" name="mainTable" id="add_mainTable"></p>
+
+            <p class="clearfix note directory-note">
+
+              <span><code>mainTable</code> is the main table which has primative key, other tables will join on it.</span>
+
+            </p>
+
+            <p class="clearfix note error">
+
+              <span></span>
+
+            </p>
+
+            <p class="clearfix buttons">
+              <button type="submit" class="submit"><span>Add Source</span></button>
+              <button type="reset" class="reset"><span>Cancel</span></button>
+            </p>
+
+          </form>
+
+        </div>        
+
+        <div class="action config" data-rel="config">
+
+          <form>
+
+            <input type="hidden" name="action" value="CONFIG">
+
+            <p class="clearfix"><label for="config_name">name:</label>
+            <input type="text" name="name" id="config_name" value="config_source"></p>
+
+            <p class="clearfix"><label for="config_dbType">dbType:</label>
+            <input type="text" name="dbType" id="config_dbType" value="mysql"></p>
+
+            <p class="clearfix"><label for="config_server">server:</label>
+            <input type="text" name="server" id="config_server" value="localhost"></p>
+
+            <p class="clearfix"><label for="config_port">port:</label>
+            <input type="text" name="port" id="config_port" value="3306"></p>
+
+            <p class="clearfix"><label for="config_user">username:</label>
+            <input type="text" name="user" id="config_user" value="user"></p>
+
+            <p class="clearfix"><label for="config_pass">password:</label>
+            <input type="password" name="pass" id="config_pass" value="password"></p>
+
+            <p class="clearfix"><label for="config_mainTable">mainTable:</label>
+            <input type="text" name="mainTable" id="config_mainTable" value="config_table"></p>
+
+            <p class="clearfix note directory-note">
+
+              <span><code>mainTable</code> is the main table which has primative key, other tables will join on it.</span>
+
+            </p>
+
+            <p class="clearfix note error">
+
+              <span></span>
+
+            </p>
+
+            <p class="clearfix buttons">
+              <button type="submit" class="submit"><span>Confirm</span></button>
+              <button type="reset" class="reset"><span>Cancel</span></button>
+            </p>
+
+          </form>
+
+        </div>         
+
+      </div>
+
+    <div id="data" class="requires-instance">
+
+      <div class="block" id="instance-data">
+
+          <h2><span>Properties</span></h2>
+          
+          <div class="message-container">
+              <div class="message"></div>
+          </div>
+
+          <div class="content">
+
+          <ul>
+
+            <li class="dbType"><dl class="clearfix">
+              <dt><span>DBType:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="connectURL"><dl class="clearfix">
+              <dt><span>Connect URL:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="mainTable"><dl class="clearfix">
+              <dt><span>Main Table:</span></dt>
+                <dd></dd>
+            </dl></li>
+        
+          </ul>
+        
+        </div>
+      </div>
+
+      <div class="block" id="index-data">
+
+          <h2><span>Perfermance Monitor</span></h2>
+          
+          <div class="message-container">
+              <div class="message"></div>
+          </div>
+
+          <div class="content">
+          
+          <div class="monitor-wrapper">
+            <div id="cpu" class="monitor" ></div>
+            <div id="mem" class="monitor" ></div>
+            <div id="disk" class="monitor" ></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="navigation" class="clearfix">
+
+    <ul>
+
+    </ul>
+  
+  </div>
+
+</div>

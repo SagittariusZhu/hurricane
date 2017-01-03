@@ -1,0 +1,171 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="subscribe" class="clearfix">
+
+  <div id="frame">
+
+    <div id="actions" class="actions clearfix">
+
+      <button id="create" type="action"><span>Create New Subscribe</span></button>
+
+      <button id="delete" class="warn requires-subscribe"><span>Delete</span></button>
+      <button id="config" class="requires-subscribe"><span>Config</span></button>    
+    
+      <div class="action create" data-rel="create">
+
+        <form>
+
+          <input type="hidden" name="action" value="CREATE">
+
+          <p class="clearfix"><label for="add_name">name:</label>
+          <input type="text" name="name" id="add_name" value="new_source"></p>
+
+          <p class="clearfix"><label for="add_dbType">dbType:</label>
+          <input type="text" name="dbType" id="add_dbType" value="mysql"></p>
+
+          <p class="clearfix"><label for="add_server">server:</label>
+          <input type="text" name="server" id="add_server" value="localhost"></p>
+
+          <p class="clearfix"><label for="add_port">port:</label>
+          <input type="text" name="port" id="add_port" value="3306"></p>
+
+          <p class="clearfix"><label for="add_user">username:</label>
+          <input type="text" name="user" id="add_user" value="user"></p>
+
+          <p class="clearfix"><label for="add_pass">password:</label>
+          <input type="password" name="pass" id="add_pass" value="password"></p>
+
+          <p class="clearfix"><label for="add_mainTable">mainTable:</label>
+          <input type="text" name="mainTable" id="add_mainTable"></p>
+
+          <p class="clearfix note directory-note">
+
+            <span><code>mainTable</code> is the main table which has primative key, other tables will join on it.</span>
+
+          </p>
+
+          <p class="clearfix note error">
+
+            <span></span>
+
+          </p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Add Subscribe</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div> 
+
+    </div>
+
+    <div id="error"></div>
+
+    <div id="current_state">
+
+      <p class="last_update">Last Update: <abbr>Unknown</abbr></p>
+      <div class="info">
+
+        <strong></strong>
+        <div class="details">
+          <div class="docs"></div>
+          <div class="dates"></div>
+        </div>
+
+        <button class="abort-import warn"><span data-aborting="Aborting Import">Abort Import</span></button>
+
+      </div>
+    
+    </div>
+
+    <div id="data" class="requires-subscribe">
+
+      <div class="block" id="source-data">
+
+          <h2><span>Tables</span></h2>
+          
+          <div class="message-container">
+              <div class="message"></div>
+          </div>
+
+          <div class="content">
+          
+          <ul>
+          
+          </ul>
+        
+        </div>
+      </div>
+
+    </div>
+
+    <div class="block hidden" id="raw_output">
+
+      <h2>
+        <a class="toggle"><span>Raw Status-Output</span></a>
+      </h2>
+        
+      <div class="message-container">
+          <div class="message"></div>
+      </div>
+
+      <div class="content">
+
+        <div id="raw_output_container"></div>
+
+      </div>
+    
+    </div>    
+
+  </div>
+
+  <div id="form">
+
+    <div id="navigation">
+
+      <ul></ul>
+
+    </div>
+
+    <form action="#" method="post" style="display: block;">
+
+      <label for="command">
+        <a rel="help">Mode</a>
+      </label>
+      <select name="mode" id="command">
+        <option>full</option>
+        <option>delta</option>
+      </select>
+
+
+
+      <label for="custom_parameters">
+        <a rel="help">Custom Parameters</a>
+      </label>
+      <input type="text" id="custom_parameters" value="" placeholder="key1=val1&amp;key2=val2">
+
+      <button class="execute" type="submit">Execute</button>
+      <button class="refresh-status"><span>Refresh Status</span></button>
+    </form>
+
+     <p id="auto-refresh-status"><a>Auto-Refresh Status</a></p>
+
+  </div>
+
+</div>

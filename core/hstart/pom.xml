@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.iipg.hurricane</groupId>
+        <artifactId>parent</artifactId>
+        <version>2.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>hstart</artifactId>
+    <name>Hurricane Start Debug Project</name>
+    <packaging>jar</packaging>  
+    
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hserver</artifactId>
+            <version>${project.version}</version>
+        </dependency>          
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hmodel</artifactId>
+            <version>${project.version}</version>
+        </dependency>          
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hcommon</artifactId>
+            <version>${project.version}</version>
+        </dependency>     
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hdb</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hadapter-solr</artifactId>
+            <version>${project.version}</version>
+        </dependency>                        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hadapter-hdfs</artifactId>
+            <version>${project.version}</version>
+        </dependency>                        
+        <dependency>
+            <groupId>org.iipg</groupId>
+            <artifactId>starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>                      
+    </dependencies>
+</project>

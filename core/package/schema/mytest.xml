@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema desc="邮件" name="mytest" version="1.5">
+<fields>
+<field indexed="true" multiValued="false" name="messageid" required="true" stored="true" type="string" unique="true"/>
+<field indexed="true" multiValued="false" name="fromaddr" stored="true" type="string"/>
+<field indexed="true" multiValued="true" name="toaddr" stored="true" type="string"/>
+<field indexed="true" multiValued="false" name="senddate" required="true" stored="true" type="date"/>
+<field indexed="true" multiValued="false" name="subject" stored="true" type="string"/>
+<field combine="true" language="cn" multiValued="false" name="content" stored="true" type="text"/>
+<field indexed="true" multiValued="true" name="content_entity" stored="true" type="string"/>
+<field indexed="true" multiValued="true" name="attachnames" stored="true" type="string"/>
+<field indexed="true" name="attach" stored="true" type="text"/>
+<field indexed="true" mode="rw" name="reader" type="string"/>
+<field indexed="true" mode="rw" name="readtime" type="date"/>
+<field multiValued="false" name="emaildata" type="hblob"/>
+<field multiValued="true" name="attachmentdata" type="hblob"/>
+</fields>
+</schema>

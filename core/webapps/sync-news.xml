@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataConfig>
+    <dataSource name="news" type="mysql" url="jdbc:mysql://dev.apollo888.com:3306/news" user="crawler" password="123456" />
+    <dataSource name="dbNews" type="mysql" url="jdbc:mysql://sr2:3306/hurricane" user="biguser" password="123456" />
+    <dataSource name="restNews" type="restful" url="http://localhost:12345/dsync" db="hurricane-db" />
+    <dataSource name="solrCloudNews" type="solr" url="cloud://sr1:2181,sr2:2181,sr3:2181" zktimeout="2000" />
+    <dataSource name="solrNews" type="solr" url="http://sr1:8080/solr" />
+    <tasks>
+        <entity source="news" dest="solrNews" target="ncl"
+          query="SELECT NCL_ID, NCL_Name, NCL_UpdateCycle FROM NewChannelList"
+          deltaImportQuery="SELECT sn, last_name, first_name, date_add(dob, interval +8 hour) as newdob FROM `order` WHERE sn='${dih.delta.sn}'"   
+          deltaQuery="SELECT sn FROM `order` where dob > '${dataimporter.last_index_time}'"
+          transformer="DateFormatTransformer">
+            <field column="NCL_ID" name="id" />
+            <field column="NCL_Name" name="name" />
+            <field column="NCL_UpdateCycle" name="updateCycle" />
+        </entity>
+        <entity source="news" dest="solrCloudNews" target="ncl"
+          query="SELECT NCL_ID, NCL_Name, NCL_UpdateCycle FROM NewChannelList"
+          deltaImportQuery="SELECT sn, last_name, first_name, date_add(dob, interval +8 hour) as newdob FROM `order` WHERE sn='${dih.delta.sn}'"   
+          deltaQuery="SELECT sn FROM `order` where dob > '${dataimporter.last_index_time}'"
+          transformer="DateFormatTransformer">
+            <field column="NCL_ID" name="id" />
+            <field column="NCL_Name" name="name" />
+            <field column="NCL_UpdateCycle" name="updateCycle" />
+        </entity>
+        <entity source="news" dest="dbNews" target="ncl"
+          query="SELECT NCL_ID, NCL_Name, NCL_UpdateCycle FROM NewChannelList"
+          deltaImportQuery="SELECT sn, last_name, first_name, date_add(dob, interval +8 hour) as newdob FROM `order` WHERE sn='${dih.delta.sn}'"   
+          deltaQuery="SELECT sn FROM `order` where dob > '${dataimporter.last_index_time}'"
+          transformer="DateFormatTransformer">
+            <field column="NCL_ID" name="id" />
+            <field column="NCL_Name" name="name" />
+            <field column="NCL_UpdateCycle" name="updateCycle" />
+        </entity>        
+    </tasks>
+</dataConfig>

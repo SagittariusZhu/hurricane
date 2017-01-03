@@ -1,0 +1,180 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="datasync" class="clearfix">
+
+  <div id="ui-block">&nbsp;</div>
+
+  <div id="frame">
+
+    <div id="actions" class="actions clearfix">
+
+      <button id="create" class="action"><span>New Task</span></button>
+
+      <button id="delete" class="warn requires-datasync"><span>Delete</span></button>
+      <button id="config" class="action requires-datasync"><span>Config</span></button>    
+      <button id="test" class="requires-datasync"><span>Test</span></button>
+    
+      <div class="action create" data-rel="create">
+
+        <form  method="post">
+          <input type="hidden" name="wt" value="json">
+          <input type="hidden" name="command" value="CREATE">
+          <input type="hidden" name="forceOnError" value="true">
+
+          <p class="clearfix"><label for="add_name">name:</label>
+          <input type="text" name="name" id="add_name" value="new_task"></p>
+
+          <p class="clearfix"><label for="add_context">context:</label>
+          <textarea name="stream.body" id="add_context" ></textarea>
+          </p>
+
+
+          <p class="clearfix note error">
+
+            <span></span>
+
+          </p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Add Task</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div>      
+
+      <div class="action config" data-rel="config">
+
+        <form  method="post">
+          <input type="hidden" name="wt" value="json">
+          <input type="hidden" name="command" value="CONFIG">
+          <input type="hidden" name="forceOnError" value="true">
+          <input type="hidden" name="name" id="name" value="">
+
+          <p class="clearfix"><label for="custom_parameters">Params:</label>
+          <input type="text" name="params" id="custom_parameters" value="" placeholder="key1=val1&amp;key2=val2">
+
+
+          <p class="clearfix note error">
+
+            <span></span>
+
+          </p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Confirm</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div>    
+
+    </div>
+
+    <div id="error"></div>
+
+    <div id="current_state">
+
+      <p class="last_update">Last Update: <abbr>Unknown</abbr></p>
+      <div class="info">
+
+        <strong></strong>
+        <div class="details">
+          <div class="docs"></div>
+          <div class="dates"></div>
+        </div>
+
+        <button class="abort-import warn"><span data-aborting="Aborting Import">Abort Import</span></button>
+
+      </div>
+    
+    </div>
+
+    <div id="file-content" class="block hidden">
+
+      <h2>
+        <a class="toggle"><span>Task Schema File</span></a>
+      </h2>
+        
+      <div class="message-container">
+          <div class="message"></div>
+      </div>
+
+      <div class="content">
+
+        <div class="response">Loading …</div>
+
+      </div>
+
+    </div>
+
+    <div class="block hidden" id="raw_output">
+
+      <h2>
+        <a class="toggle"><span>Task Params</span></a>
+      </h2>
+        
+      <div class="message-container">
+          <div class="message"></div>
+      </div>
+
+      <div class="content">
+
+        <div id="raw_output_container"></div>
+
+      </div>
+    
+    </div>    
+
+  </div>
+
+  <div id="form">
+
+    <div id="navigation">
+
+      <ul></ul>
+
+    </div>
+
+    <!--form action="#" method="post" style="display: block;">
+
+      <label for="command">
+        <a rel="help">Mode</a>
+      </label>
+      <select name="mode" id="command">
+        <option>full</option>
+        <option>delta</option>
+      </select>
+
+
+
+      <label for="custom_parameters">
+        <a rel="help">Custom Parameters</a>
+      </label>
+      <input type="text" id="custom_parameters" value="" placeholder="key1=val1&amp;key2=val2">
+
+      <button class="execute" type="submit">Execute</button>
+      <button class="refresh-status"><span>Refresh Status</span></button>
+    </form-->
+
+     <!--p id="auto-refresh-status"><a>Auto-Refresh Status</a></p-->
+
+  </div>
+
+</div>

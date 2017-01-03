@@ -1,0 +1,271 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="index" class="clearfix">
+
+  <div class="clearfix">
+
+    <div class="index-left">
+
+      <div class="block" id="instance">
+
+          <h2><span>Instance</span></h2>
+
+          <div class="content">
+
+            <ul class="data">
+
+              <li class="start_time"><dl class="clearfix">
+                <dt><span>Start</span></dt>
+                  <dd class="timeago"></dd>
+              </dl></li>
+
+              <li class="hmw_spec_version"><dl class="clearfix">
+                <dt><span>hmw-spec</span></dt>
+                  <dd></dd>
+              </dl></li>
+
+              <li class="jvm_version"><dl class="clearfix">            
+                <dt><span>JVM</span></dt>
+                  <dd></dd>
+              </dl></li>
+
+              <li class="zoo_info"><dl class="clearfix">            
+                <dt><span>ZooKeeper</span></dt>
+                  <dd></dd>
+              </dl></li>
+            
+              <li class="ftp_info"><dl class="clearfix">            
+                <dt><span>FTP Server</span></dt>
+                  <dd></dd>
+              </dl></li>
+
+            </ul>
+
+          </div>
+
+      </div>
+
+    </div>
+      
+    <div class="index-right">
+
+      <div class="block" id="system">
+
+          <h2><span>System</span></h2>
+          <a class="reload"><span>reload</span></a>
+
+          <div class="content">
+
+            <div id="physical-memory-bar">
+
+              <p data-desc="physical-memory-bar">Physical Memory</p>
+              <div class="bar-holder">
+
+                <div class="bar-max bar">
+                  <span class="bar-max val"></span>
+
+                  <div class="bar-total bar">
+                    <span class="bar-total val"></span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="no-info">Sorry, no information available</p>
+
+          </div>
+
+          <div class="content">
+
+            <div id="jvm-memory-bar">
+
+              <p data-desc="physical-memory-bar">JVM Memory</p>
+              <div class="bar-holder">
+
+                <div class="bar-max bar">
+                  <span class="bar-max val"></span>
+
+                  <div class="bar-total bar">
+                    <span class="bar-total val"></span>
+
+                    <div class="bar-used bar">
+                      <span class="bar-used val"></span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+      </div>      
+
+    </div>
+
+  </div>
+
+<!-- Solr -->
+  <div class="clearfix">
+
+    <div class="index-left">
+
+      <div class="block" id="solr">
+
+          <h2><span>Solr</span></h2>
+
+          <div class="content clearfix">
+
+            <ul class="data">
+
+              <li class="solr_version"><dl class="clearfix">
+                <dt><span>version</span></dt>
+                  <dd></dd>
+              </dl></li>              
+
+              <li class="solr_cloud"><dl class="clearfix">            
+                <dt><span>Cloud</span></dt>
+                  <dd></dd>
+              </dl></li>
+
+              <li class="solr_nodes"><dl class="clearfix">
+                <dt><span>Nodes</span></dt>
+                  <dd class="solr_element"></dd>
+              </dl></li>
+            
+            </ul>
+
+            <p class="no-info" id="solr-no-info">Sorry, no information available</p>          
+
+          </div>
+
+      </div>   
+
+    </div>
+    <div class="index-right">
+
+      <div class="block" id="solr-space">
+
+          <h2><span data-desc="solr-space-bar">Solr-Space</span></h2>
+
+          <div class="content">
+
+            <div id="solr-space-bar">
+              <div class="bar-holder">
+
+                <div class="bar-max bar">
+                  <span class="bar-max val"></span>
+
+                  <div class="bar-total bar">
+                    <span class="bar-total val"></span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- HDFS -->
+  <div class="clearfix">
+
+    <div class="index-left">
+
+      <div class="block" id="hdfs">
+
+          <h2><span>HDFS</span></h2>
+
+          <div class="content clearfix">
+
+            <ul class="data">
+
+              <li class="hdfs_version"><dl class="clearfix">            
+                <dt><span>version</span></dt>
+                  <dd></dd>
+              </dl></li>
+
+              <li class="hdfs_nnodes"><dl class="clearfix">            
+                <dt><span>NameNodes</span></dt>
+                  <dd class="hdfs_element"></dd>
+              </dl></li>
+
+              <li class="hdfs_dnodes"><dl class="clearfix">            
+                <dt><span>DataNodes</span></dt>
+                  <dd class="hdfs_element"></dd>
+              </dl></li>
+            
+            </ul>
+
+            <p class="no-info" id="hdfs-no-info">Sorry, no information available</p>          
+
+          </div>
+
+      </div>
+
+    </div>
+    <div class="index-right">
+
+      <div class="block" id="hdfs-space">     
+
+          <h2><span data-desc="hdfs-space-bar">HDFS-Space</span></h2>
+
+          <div class="content">
+
+            <div id="hdfs-space-bar">
+              <div class="bar-holder">
+
+                <div class="bar-max bar">
+                  <span class="bar-max val"></span>
+
+                  <div class="bar-total bar">
+                    <span class="bar-total val"></span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

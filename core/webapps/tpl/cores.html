@@ -1,0 +1,200 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="cores" class="clearfix empty">
+
+  <div id="ui-block">&nbsp;</div>
+
+  <div id="frame">
+
+    <div id="actions" class="actions clearfix">
+      
+      <button id="add" class="action requires-core"><span>Add Core</span></button>
+
+      <button id="unload" class="warn requires-core"><span>Delete</span></button>
+
+      <button id="reload" class="requires-core"><span>Refresh</span></button>
+<!--
+      <button id="rename" class="action requires-core"><span>Rename</span></button>
+      <button id="swap" class="action requires-core"><span>Swap</span></button>
+
+      <button id="optimize" class="requires-core"><span>Optimize</span></button>
+-->
+      <div class="action add" data-rel="add">
+
+        <form  method="post">
+          <input type="hidden" name="wt" value="json">
+          <input type="hidden" name="action" value="CREATE">
+          <input type="hidden" name="forceOnError" value="true">
+
+          <p class="clearfix"><label for="add_schema">schema:</label>
+          <textarea name="stream.body" id="add_schema" ></textarea>
+          </p>
+
+
+          <p class="clearfix note error">
+
+            <span></span>
+
+          </p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Add Core</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div>
+
+      <div class="action rename" data-rel="rename">
+
+        <form>
+
+          <input type="hidden" name="action" value="RENAME">
+          <input type="hidden" name="core" data-core="current">
+
+          <p class="clearfix"><label for="rename_other">New Name:</label>
+          <input type="text" name="other" data-core="current" id="rename_other"></p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Rename Core</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div>
+
+      <div class="action swap" data-rel="swap">
+
+        <form>
+
+          <input type="hidden" name="action" value="SWAP">
+
+          <p class="clearfix"><label for="swap_core">this:</label>
+          <input type="text" id="swap_core" name="core" data-core="current" readonly="readonly"></p>
+
+          <p class="clearfix"><label for="swap_other">and:</label>
+          <select name="other" id="swap_other" name="other" class="other">
+          </select></p>
+
+          <p class="clearfix buttons">
+            <button type="submit" class="submit"><span>Swap Cores</span></button>
+            <button type="reset" class="reset"><span>Cancel</span></button>
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="data" class="requires-core">
+
+      <div class="block" id="core-data">
+
+          <h2><span>Core</span></h2>
+          
+          <div class="message-container">
+              <div class="message"></div>
+          </div>
+
+          <div class="content">
+
+          <ul>
+
+            <li class="desc"><dl class="clearfix">
+              <dt><span>描述:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="shards"><dl class="clearfix">
+              <dt><span>分片数:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="replicationFactor"><dl class="clearfix">
+              <dt><span>复制数:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="maxShardsPerNode"><dl class="clearfix">
+              <dt><span>每节点最大分片数:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="fields"><dl class="clearfix">
+              <dt><span>字段数:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="health"><dl class="clearfix">
+              <dt><span>健康状况:</span></dt>
+                <dd class="ico"><span></span></dd>
+            </dl></li>            
+        
+          </ul>
+        
+        </div>
+      </div>
+
+      <div class="block" id="index-data">
+
+          <h2><span>Index</span></h2>
+          
+          <div class="message-container">
+              <div class="message"></div>
+          </div>
+
+          <div class="content">
+          
+          <ul>
+
+            <li class="lastModified"><dl class="clearfix">
+              <dt><span>lastModified:</span></dt>
+                <dd class="timeago"></dd>
+            </dl></li>
+
+            <li class="numDocs"><dl class="clearfix">
+              <dt><span>记录数:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="deletedDocs"><dl class="clearfix">
+              <dt><span>deletedDocs:</span></dt>
+                <dd></dd>
+            </dl></li>
+
+            <li class="optimized"><dl class="clearfix">
+              <dt><span>optimized:</span></dt>
+                <dd class="ico"><span></span></dd>
+            </dl></li>
+          
+          </ul>
+        
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+
+  <div id="navigation" class="requires-core clearfix">
+  
+  </div>
+
+</div>

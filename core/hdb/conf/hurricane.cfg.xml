@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Hurricane-configuration>
+	<property name="connection.url">
+		XXXXXXXXXXX
+	</property>
+	<property name="connection.username">test</property>
+	<property name="connection.password">123456</property>
+	
+	<mapping resource="jnsc/jjpt/fwgl/bean/NodeDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/OrchestrationDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/ServerDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/ServerFileDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/ServergroupDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/ProxyDb.hcm.xml" />
+	<mapping resource="jnsc/jjpt/fwgl/bean/RegisterDb.hcm.xml" />
+</Hurricane-configuration>
+

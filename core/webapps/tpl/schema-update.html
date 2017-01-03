@@ -1,0 +1,94 @@
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<div id="schema-update" >
+
+<div id="schema-contain">
+  <h1>Existing Fields:</h1>
+
+  <table id="schema" class="flags" cellspacing="0" cellpadding="0" border="0">
+
+    <thead>
+
+      <tr>
+
+        <th>Fields</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+<button id="create-field">Create new Field</button>
+
+</div>
+
+<div id="dialog-form" title="Create/Edit Field">
+  <form >
+   <fieldset>
+    <ul>
+      <li>
+        <div id="field-selector">
+          <div id="create-new-field">
+            <label for="name">Name: </label>
+            <dd><input type="text" name="ch_name" id="ch_name" class="text" /></dd>
+          </div>
+          <p id="modify-exist-field">
+            <span>FieldName</span>
+          </p>
+        </div>
+      </li>
+      <li>
+        <label for="type">Type:  </label>
+        <dd>
+          <select name="ch_type" id="ch_type">
+            <option value="string">string</option>
+            <option value="int">int</option>
+            <option value="long">long</option>
+            <option value="double">double</option>
+            <option value="float">float</option>
+            <option value="date">date</option>
+            <option value="text">text</option>
+            <option value="hblob">hblob</option>
+            <option value="hfile">hfile</option>
+            <option value="hipaddr">hipaddr</option>
+          </select>
+        </dd>
+      </li>
+
+      <li><label for="ch_effects">Indexed: </label><dd><input type="checkbox" id="ch_indexed" name="ch_indexed" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">Stored: </label><dd><input type="checkbox" id="ch_stored" name="ch_stored" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">Unique: </label><dd><input type="checkbox" id="ch_unique" name="ch_unique" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">Required: </label><dd><input type="checkbox" id="ch_required" name="ch_required" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">Combine: </label><dd><input type="checkbox" id="ch_combine" name="ch_combine" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">MultiValued: </label><dd><input type="checkbox" id="ch_multiValued" name="ch_multiValued" data-on="True" data-off="False" /></dd></li>
+      <li><label for="ch_effects">Mode: </label><dd><input type="checkbox" id="ch_mode" name="ch_mode" data-on="RO" data-off="RW" /></dd></li>
+    </ul>
+
+    <input type="hidden" name="rowindex" id="rowindex" value=""/>
+
+
+  </fieldset>
+  </form>
+
+</div>

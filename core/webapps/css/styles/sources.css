@@ -1,0 +1,303 @@
+/*
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+#content #sources
+{
+  position: relative;
+}
+
+#content #sources #ui-block
+{
+  background-color: #fff;
+  height: 200px;
+  display: none;
+  position: absolute;
+  left: -5px;
+  top: 35px;
+  width: 500px;
+}
+
+#content #sources.empty .requires-core
+{
+  display: none;
+}
+
+#content #sources #frame
+{
+  float: right;
+  width: 86%;
+}
+
+#content #sources #navigation
+{
+  padding-top: 50px;
+  width: 12%;
+}
+
+#content #sources #navigation a
+{
+  padding-left: 5px;
+}
+
+#content #sources #frame .actions
+{
+  margin-bottom: 20px;
+  min-height: 30px;
+}
+
+#content #sources .actions div.action
+{
+  width: 300px;
+}
+
+#content #sources .actions div.action .cloud
+{
+  display: none;
+}
+
+#content #sources .actions form .directory-note
+{
+  background-image: url( ../../img/ico/information-white.png );
+  background-position: 22% 1px;
+  color: #c0c0c0;
+}
+
+#content #sources .actions form .error
+{
+  background-image: url( ../../img/ico/cross-button.png );
+  background-position: 22% 1px;
+  color: #c00;
+  font-weight: bold;
+  display: none;
+}
+
+#content #sources .actions form p
+{
+  padding-bottom: 8px;
+}
+
+#content #sources .actions form label
+{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
+  width: 25%;
+}
+
+
+#content #sources .actions form select,
+#content #sources .actions form .buttons,
+#content #sources .actions form .note span
+{
+  float: right;
+}
+
+#content #sources .actions form .note span
+{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#content #sources .actions form .buttons
+{
+  padding-top: 10px;
+}
+
+#content #sources .actions form button.submit
+{
+  margin-right: 20px;
+}
+
+#content #sources .actions form button.submit span
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #sources .actions form button.reset span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #sources .actions #add
+{
+  left: 0;
+  position: absolute;
+}
+
+#content #sources .actions #add span
+{
+  background-image: url( ../../img/ico/plus-button.png );
+}
+
+#content #sources .actions #delete
+{
+  margin-right: 0px;
+}
+
+#content #sources .actions #delete span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #sources .actions #config span
+{
+  background-image: url( ../../img/ico/arrow-circle.png );
+}
+
+#content #sources .actions #rename span
+{
+  background-image: url( ../../img/ico/ui-text-field-select.png );
+}
+
+#content #sources .actions #swap span
+{
+  background-image: url( ../../img/ico/arrow-switch.png );
+}
+
+#content #sources .actions #optimize
+{
+  display: none;
+}
+
+#content #sources .actions #optimize span
+{
+  background-image: url( ../../img/ico/hammer-screwdriver.png );
+}
+
+#content #sources .actions div.action
+{
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 5px 5px 10px #c0c0c0;
+  -moz-box-shadow: 5px 5px 10px #c0c0c0;
+  -webkit-box-shadow: 5px 5px 10px #c0c0c0;
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  padding: 10px;
+  width:400px; 
+  height:400px;
+}
+
+#content #sources form .error
+{
+  background-image: url( ../../img/ico/cross-button.png );
+  background-position: 22% 1px;
+  color: #c00;
+  font-weight: bold;
+  display: none;
+}
+
+#content #sources form p
+{
+  padding-bottom: 8px;
+}
+
+#content #sources form label
+{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
+  width: 25%;
+}
+
+#content #sources form input,
+#content #sources form select,
+#content #sources form .buttons,
+#content #sources form .note span
+{
+  float: right;
+  width: 71%;
+}
+
+#content #sources form .note span
+{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#content #sources form .buttons
+{
+  padding-top: 10px;
+}
+
+#content #sources form button.submit
+{
+  margin-right: 20px;
+}
+
+#content #sources form button.submit span
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #sources form button.reset span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #sources #data #core-data h2 { background-image: url( ../../img/ico/box.png ); }
+#content #sources #data #index-data h2 { background-image: url( ../../img/ico/chart.png ); }
+
+#content #sources #data #index-data
+{
+  margin-top: 10px;
+}
+
+#content #sources #data li
+{
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+#content #sources #data li.odd
+{
+  background-color: #f8f8f8;
+}
+
+#content #sources #data li dt
+{
+  float: left;
+  width: 17%;
+}
+
+#content #sources #data li dd
+{
+  float: right;
+  width: 82%;
+}
+
+#content #sources #data li dd.ico
+{
+  background-image: url( ../../img/ico/slash.png );
+  height: 20px;
+}
+
+#content #sources #data li dd.ico.ico-1
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #sources #data li dd.ico span
+{
+  display: none;
+}

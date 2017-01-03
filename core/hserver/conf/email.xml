@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="email"  version="1.5" desc="邮件">
+	<fields>	
+	    <!-- 第一类是由邮件分析后生成的数据项 -->
+ 		<field name="messageid" type="string" indexed="false" stored="true"  multiValued="false"  unique="true"/>
+		<field name="fromaddr" type="string" indexed="true" stored="true" multiValued="false" />
+		<field name="toaddr" type="string" indexed="true" stored="true" multiValued="false" />
+		<field name="senddate" type="date" indexed="true" stored="true" multiValued="false" required="true" />
+		<field name="subject" type="string" indexed="true" stored="true" multiValued="false"/>
+		<field name="content" type="text " stored="true" language="cn" combine="true" multiValued="false" />
+   		<field name="content_entity" type="string" index="true" stored="true"  multiValued="true" />
+		<field name="attachnames" type="string" indexed="true" stored="true" multiValued="true" />
+		<field name="attach" type="text" indexed="true" stored="true"/>
+		 <!-- 第二类是邮件管理或人工处理中产生的如阅报人(reader)、阅报时间(readtime)等，这类数据除了支持查询检索外还会在人工处理过程中会不断进行更新-->
+		<field name="reader" type="string" indexed="true" mode="rw" />
+		<field name="readtime" type="date" indexed="true" mode="rw" />
+        <!-- 第三类数据是动态扩展属性 -->
+		<dynamicField name="*_str" type="string" indexed="true" stored="true"/>
+		<dynamicField name="*_date" type="date" indexed="true" stored="true"/>
+		<dynamicField name="*_int"  type="int" indexed="true" stored="true"/>
+		 <!-- 第四类数据是原始数据存储字段 -->
+ 		<field name="emaildata" type="hblob" />
+		<field name="attachmentdata" type="hblob" />
+         <!-- 第五类数据是关联关系属性 -->
+		<relation name="send_receive" type="normal" from="fromaddr" to="toaddr" />
+		<relation name="together" type="single" field="content_entity" />
+	</fields>
+</schema>

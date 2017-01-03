@@ -1,0 +1,50 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>tar.gz</format>
+  </formats>
+  <includeBaseDirectory>true</includeBaseDirectory>
+  <baseDirectory>hmonitor</baseDirectory>
+  <dependencySets>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <outputDirectory>/lib</outputDirectory>
+    </dependencySet>
+  </dependencySets>
+
+  <moduleSets>
+  </moduleSets>
+  
+  <fileSets>
+    <fileSet>
+      <directory>.</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>conf/**</include>
+        <include>logs</include>
+        <include>readme.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>../../dist</directory>
+      <outputDirectory>/lib</outputDirectory>
+      <includes>
+        <include>hu-common-${project.version}.jar</include>
+        <include>hu-monitor-${project.version}.jar</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>../starter</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>sbin/*</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <files>
+    <file>
+      <source>./starter.properties</source>
+      <outputDirectory>/</outputDirectory>
+    </file>
+  </files>    
+</assembly>

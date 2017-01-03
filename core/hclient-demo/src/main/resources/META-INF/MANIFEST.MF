@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: zhu
+Build-Jdk: 1.6.0_13
+Specification-Title: Hurricane client package
+Specification-Version: 0.0.1-SNAPSHOT
+Implementation-Title: Hurricane client package
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.iipg.hurricane
+Class-Path: hu-client-0.0.1-SNAPSHOT.jar  
+ hu-common-0.0.1-SNAPSHOT.jar 
+ hu-model-0.0.1-SNAPSHOT.jar 
+ commons-logging-1.1.3.jar 
+ Ice.jar 
+ json-20131018.jar 
+Main-Class: org.iipg.hurricane.Client
+

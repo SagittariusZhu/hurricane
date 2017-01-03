@@ -1,0 +1,96 @@
+<!--
+/*
+* Licensed to the Apache Software Foundation (ASF) under one or more
+* contributor license agreements.  See the NOTICE file distributed with
+* this work for additional information regarding copyright ownership.
+* The ASF licenses this file to You under the Apache License, Version 2.0
+* (the "License"); you may not use this file except in compliance with
+* the License.  You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<div id="documents" class="clearfix">
+  <div id="form">
+    <form action="#" method="post">
+      <label for="qt">
+        <a rel="help">Request-Handler (qt)</a>
+      </label>
+
+      <div><select name="update-type" id="update-type" title="The type of the Request handler">
+        <!-- TODO: support the Builder -->
+        <option selected="true" value="addDoc">/addDoc</option>
+        <option  value="update" value="update">/update</option>
+        <option value="delete" value="delete">/delete</option>
+      </select></div>
+
+      <!-- TODO: Add support for uploading docs and a doc wizard -->
+      <label for="document-type">
+        <a rel="help">Build Document</a>
+      </label>
+
+      <div id="document-container">
+        <div id="wizard">
+          <div id="wizard-fields">
+            <div><span class="description">Field</span>: <select id="wiz-field-select" name="wiz-field-select"></select>
+            </div>
+            <div><span id="wiz-field-data"><span class="description">Field Data</span>:</span> 
+              <textarea id="wizard-doc" name="wizard-doc" rows="10" cols="40">Enter your field text here and then click "Add Field" to add the field to the document.</textarea>
+            </div>
+          </div>
+          <div id="wizard-add"><a id="add-field-href" href="#">
+            <img border="0" src="./img/ico/plus-button.png"/>Add  Field</a></div>
+        </div>
+        <label for="document">
+          <a rel="help">Document(s)</a>
+        </label>
+        <textarea name="document" id="document" title="The Document" rows="10"
+                  cols="70">{"id":"change.me","title":"change.me"}</textarea>
+
+        <div id="file-upload">
+          <input type="file" id="the-file" name="the-file"/>
+        </div>
+      </div>
+
+      <div id="advanced">
+        <!-- TODO: only show for JSON/XML-->
+        <div id="attribs">
+          <div id="general-attribs">
+            <label for="wt">
+              <a rel="wt">wt</a>
+            </label>
+            <input type="text" id="wt" value="json" title="wt">
+          </div>
+          <!-- Boost is json only, since the XML has it embedded -->
+          <div id="update-delete-only">
+            <label for="query">
+              <a rel="help">query</a>
+            </label>
+            <input type="text" id="q" value="" title="q">
+          </div>
+          <div id="add-only">
+            <label for="autoUniqueKey">
+              <a rel="help">autoUniqueKey</a>
+            </label>
+            <input type="text" id="autoUniqueKey" value="true" title="Overwrite">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" id="submit">Submit Document</button>
+    </form>
+  </div>
+  <div id="result">
+    <div id="response">
+      <!--<iframe src="about:blank"></iframe>-->
+    </div>
+
+  </div>
+</div>

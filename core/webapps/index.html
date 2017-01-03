@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<head>
+    
+  <title>Hurricane Admin</title>
+    
+  <link rel="icon" type="image/ico" href="img/favicon.ico?_=${version}">
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css">
+  <link rel="stylesheet" type="text/css" href="css/styles/common.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/analysis.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/cloud.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/cores.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/sources.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/dashboard.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/datasync.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/dataimport.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/files.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/index.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/properties.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/logging.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/menu.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/plugins.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/documents.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/query.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/replication.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/subscribe.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/schema-update.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/instances.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/styles/threads.css?_=${version}">
+  <link rel="stylesheet" type="text/css" href="css/chosen.css?_=${version}">
+
+  <meta http-equiv="x-ua-compatible" content="IE=9" >
+  <Meta http-equiv="Content-Type" Content="text/html; Charset=utf-8">   
+  <script type="text/javascript">
+    
+  var app_config = {};
+  app_config.url="";
+  app_config.solr_path = '/hurricane';
+  app_config.hurricane_path = '/hurricane';
+  app_config.core_admin_path = '/admin/cores';
+  app_config.instance_admin_path = '/admin/instances';
+    
+  </script>
+    
+</head>
+<body>
+    
+  <div id="wrapper">
+    
+    <div id="header">
+            
+      <a href="./" id="solr"><span>Apache SOLR</span></a>
+
+      <p id="environment">&nbsp;</p>
+
+    </div>
+
+    <div id="main" class="clearfix">
+    
+      <div id="init-failures">
+
+          <h2>SolrCore Initialization Failures</h2>
+          <ul></ul>
+          <p>Please check your logs for more information</p>
+                
+      </div>
+
+      <div id="content-wrapper">
+        <div id="content">
+                  
+          &nbsp;
+                  
+        </div>
+      </div>
+            
+      <div id="menu-wrapper">
+        <div>
+                  
+          <ul id="menu">
+
+            <li id="index" class="global"><p><a href="#/">仪表盘</a></p></li>
+<!--
+            <li id="logging" class="global"><p><a href="#/~logging">Logging</a></p>
+              <ul>
+                <li class="level"><a href="#/~logging/level">Level</a></li>
+              </ul>
+            </li>
+
+
+            <li id="instances" class="global"><p><a href="#/~instances">实例管理</a></p></li>
+-->
+            <li id="sources" class="global"><p><a href="#/~sources">数据源</a></p></li>
+            <li id="cores" class="global"><p><a href="#/~cores">表管理</a></p></li>
+            <li id="properties" class="global"><p><a href="#/~properties">系统参数</a></li>
+<!--
+
+            <li id="threads" class="global"><p><a href="#/~threads">Thread Dump</a></p></li>
+-->            
+          </ul>
+
+          <div id="core-selector">
+            <div id="has-cores">
+              <select data-placeholder="Core Selector"></select>
+            </div>
+            <p id="has-no-cores"><a href="#/~cores">
+              No cores available
+              <span>Go and create one</span>
+            </a></p>
+          </div>
+          <div id="core-menu">
+            <ul></ul>
+          </div>
+                  
+        </div>
+      </div>
+            
+            
+    </div>
+    
+  </div>
+
+  <div id="connection_status">
+
+    <span>Connection lost &hellip;</span>
+
+  </div>
+  
+  <script type="text/javascript"> var require = { urlArgs: '_=${version}' }; </script>
+  <script src="js/require.js?_=${version}" data-main="js/main"></script>
+
+</body>
+</html>

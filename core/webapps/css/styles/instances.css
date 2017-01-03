@@ -1,0 +1,429 @@
+/*
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+#content #instances
+{
+  position: relative;
+}
+
+#content #instances #ui-block
+{
+  background-color: #fff;
+  height: 200px;
+  display: none;
+  position: absolute;
+  left: -5px;
+  top: 35px;
+  width: 500px;
+}
+
+#content #instances.empty .requires-instance
+{
+  display: none;
+}
+
+#content #instances #frame
+{
+  float: right;
+  width: 86%;
+}
+
+#content #instances #navigation
+{
+  padding-top: 50px;
+  width: 12%;
+}
+
+#content #instances #navigation a
+{
+  padding-left: 5px;
+}
+
+#content #instances #frame .actions
+{
+  margin-bottom: 20px;
+  min-height: 30px;
+}
+
+#content #instances .actions div.action
+{
+  width: 300px;
+}
+
+#content #instances .actions div.action .cloud
+{
+  display: none;
+}
+
+#content #instances .actions form .directory-note
+{
+  background-image: url( ../../img/ico/information-white.png );
+  background-position: 22% 1px;
+  color: #c0c0c0;
+}
+
+#content #instances .actions form .error
+{
+  background-image: url( ../../img/ico/cross-button.png );
+  background-position: 22% 1px;
+  color: #c00;
+  font-weight: bold;
+  display: none;
+}
+
+#content #instances .actions form p
+{
+  padding-bottom: 8px;
+}
+
+#content #instances .actions form label
+{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
+  width: 25%;
+}
+
+#content #instances .actions form input,
+#content #instances .actions form select,
+#content #instances .actions form .buttons,
+#content #instances .actions form .note span
+{
+  float: right;
+  width: 71%;
+}
+
+#content #instances .actions form .note span
+{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#content #instances .actions form .buttons
+{
+  padding-top: 10px;
+}
+
+#content #instances .actions form button.submit
+{
+  margin-right: 20px;
+}
+
+#content #instances .actions form button.submit span
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #instances .actions form button.reset span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #instances .actions #add
+{
+  left: 0;
+  position: absolute;
+}
+
+#content #instances .actions #add span
+{
+  background-image: url( ../../img/ico/plus-button.png );
+}
+
+#content #instances .actions #delete
+{
+  margin-right: 0px;
+}
+
+#content #instances .actions #delete span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #instances .actions #config span
+{
+  background-image: url( ../../img/ico/construction.png );
+}
+
+#content #instances .actions #rename span
+{
+  background-image: url( ../../img/ico/ui-text-field-select.png );
+}
+
+#content #instances .actions #swap span
+{
+  background-image: url( ../../img/ico/arrow-switch.png );
+}
+
+#content #instances .actions #optimize
+{
+  display: none;
+}
+
+#content #instances .actions #optimize span
+{
+  background-image: url( ../../img/ico/hammer-screwdriver.png );
+}
+
+#content #instances .actions div.action
+{
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 5px 5px 10px #c0c0c0;
+  -moz-box-shadow: 5px 5px 10px #c0c0c0;
+  -webkit-box-shadow: 5px 5px 10px #c0c0c0;
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  padding: 10px;
+  z-index: 800;
+}
+
+#content #instances #data #instance-data h2 { background-image: url( ../../img/ico/box.png ); }
+#content #instances #data #index-data h2 { background-image: url( ../../img/ico/chart.png ); }
+
+#content #instances #data #index-data
+{
+  margin-top: 10px;
+}
+
+#content #instances #data #index-data .table a span.name
+{
+  background-position: 100% 50%;
+  cursor: pointer;
+  padding-right: 21px;
+}
+
+#content #instances #data #index-data .table a span.name em
+{
+  color: #f00;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#content #instances #data #index-data .table a:hover span.name
+{
+  background-image: url( ../../img/ico/pencil-small.png );
+}
+
+#content #instances #data li
+{
+  padding-bottom: 3px;
+  padding-top: 3px;
+  position: relative;
+}
+
+#content #instances #data li.odd
+{
+  background-color: #f8f8f8;
+}
+
+#content #instances #data li dt
+{
+  float: left;
+  width: 17%;
+}
+
+#content #instances #data li dd
+{
+  float: right;
+  width: 82%;
+}
+
+#content #instances #data li dd.ico
+{
+  background-image: url( ../../img/ico/slash.png );
+  height: 20px;
+}
+
+#content #instances #data li dd.ico.ico-1
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #instances #data li dd.ico span
+{
+  display: none;
+}
+
+#content #instances #data #index-data .table a
+{
+  height: 17px;
+  line-height: 17px;
+  padding: 0;
+  width: 90%;
+}
+
+#content #instances #data #index-data .table a:hover
+{
+  color: #008;
+}
+
+#content #instances #data #index-data .table .selector-holder
+{
+  position: absolute;
+  top: -2px;
+  z-index: 700;
+}
+
+#content #instances #data #index-data .table .selector-holder.open
+{
+  background-color: #fff;
+  margin-left: -19px;
+  z-index: 800;
+}
+
+#content #instances #data #index-data .table .selector-holder { left: 440px; }
+
+#content #instances #data #index-data .table .selector
+{
+  border: 1px solid transparent;
+  position: relative;
+}
+
+#content #instances #data #index-data .table .open .selector
+{
+  border-color: #f0f0f0;
+  box-shadow: 5px 5px 10px #c0c0c0;
+  -moz-box-shadow: 5px 5px 10px #c0c0c0;
+  -webkit-box-shadow: 5px 5px 10px #c0c0c0;
+}
+
+#content #instances #data #index-data .table .selector a
+{
+  display: block;
+  padding: 2px;
+  width: auto;
+}
+
+#content #instances #data #index-data .table .selector a.trigger
+{
+  padding: 6px;
+}
+
+#content #instances #data #index-data .table .selector .close
+{
+  display: none;
+}
+
+#content #instances #data #index-data .table .open .selector .close
+{
+  background-image: url( ../../img/ico/cross-0.png );
+  background-position: 50% 50%;
+  display: block;
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 20px;
+}
+
+#content #instances #data #index-data .table .open .selector .close:hover
+{
+  background-image: url( ../../img/ico/cross-1.png );
+}
+
+#content #instances #data #index-data .table .open .selector .close span
+{
+  display: none;
+}
+
+#content #instances #data #index-data .table .open .selector a.trigger
+{
+  display: none;
+}
+
+#content #instances #data #index-data .table .selector ul
+{
+  display: none;
+}
+
+#content #instances #data #index-data .table .open .selector ul
+{
+  display: block;
+}
+
+#content #instances #data #index-data .table .selector ul li
+{
+  background: none;
+  margin-left: 0;
+}
+
+#content #instances #data #index-data .table .selector ul li a
+{
+  background-image: url( ../../img/ico/ui-radio-button-uncheck.png );
+  background-position: 2px 50%;
+  padding-left: 21px;
+}
+
+#content #instances #data #index-data .table .selector ul li a.level
+{
+  background-color: #f0f0f0;
+}
+
+#content #instances #data #index-data .table .selector ul li a:hover
+{
+  background-image: url( ../../img/ico/ui-radio-button.png );
+}
+
+#content #instances #data #index-data .table .selector li.unset
+{
+  border-top: 1px solid #f0f0f0;
+}
+
+#content #instances #data #index-data .table .selector li.unset a
+{
+  background-image: url( ../../img/ico/cross-0.png );
+  background-position: 4px 50%;
+}
+
+#content #instances #data #index-data .table .selector li.unset a:hover
+{
+  background-image: url( ../../img/ico/cross-1.png );
+  color: #800;
+}
+
+#content .monitor-wrapper
+{
+  margin:0 auto;
+  width:930px;
+}
+
+#content .monitor-wrapper .monitor
+{
+  width: 310px; 
+  height: 400px; 
+  margin: 0 auto;
+}
+
+#cpu {
+  float:left;
+  background:#f00;
+}
+
+#mem {
+  float:right;
+  background:#0f0;
+}
+
+#disk {
+  float:right;
+  background:#00f;
+}

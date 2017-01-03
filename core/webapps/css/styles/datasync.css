@@ -1,0 +1,774 @@
+/*
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+#content #datasync
+{
+  background-image: url( ../../img/div.gif );
+  background-position: 21% 0;
+  background-repeat: repeat-y;
+  position: relative;
+}
+#content #datasync #admin
+{
+  padding-bottom: 5px;
+}
+
+#content #datasync #ui-block
+{
+  background-color: #fff;
+  height: 200px;
+  display: none;
+  position: absolute;
+  left: -5px;
+  top: 35px;
+  width: 500px;
+}
+
+#content #datasync.empty .requires-source
+{
+  display: none;
+}
+
+#content #datasync .actions #create
+{
+  left: 0;
+  position: absolute;
+}
+
+#content #datasync .actions #create span { background-image: url( ../../img/ico/plus-button.png ); }
+#content #datasync .actions #delete span { background-image: url( ../../img/ico/cross.png ); }
+#content #datasync .actions #config span { background-image: url( ../../img/ico/construction.png ); }
+#content #datasync .actions #test span { background-image: url( ../../img/ico/arrow-switch.png ); }
+
+#content #datasync #frame
+{
+  float: right;
+  width: 78%;
+}
+
+#content #datasync #form
+{
+  float: left;
+  width: 20%;
+  padding-top: 50px;
+}
+
+#content #datasync #form #navigation
+{
+  border-right: 0;
+}
+
+#content #datasync #form #navigation a
+{
+  background-image: url( ../../img/ico/status-offline.png );
+}
+
+#content #datasync #form #navigation .current a
+{
+  background-image: url( ../../img/ico/status.png );
+}
+
+#content #datasync #form form
+{
+  display: none;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+#content #datasync.error #form form
+{
+  display: none !important;
+}
+
+#content #datasync #form label
+{
+  margin-top: 5px;
+}
+#content #datasync #form select,
+#content #datasync #form textarea
+{
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+#content #datasync #form input
+{
+  width: 98%;
+}
+
+#content #datasync #form button
+{
+  margin-top: 10px;
+}
+
+#content #datasync #form .execute span
+{
+  background-image: url( ../../img/ico/document-import.png );
+}
+
+#content #datasync #form .refresh-status span
+{
+  background-image: url( ../../img/ico/arrow-circle.png );
+}
+
+#content #datasync #form .refresh-status span.success
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #datasync #form #start
+{
+  float: left;
+  width: 47%;
+}
+
+#content #datasync #form #rows
+{
+  float: right;
+  width: 47%;
+}
+
+#content #datasync #form .checkbox input
+{
+  margin-bottom: 0;
+  width: auto;
+}
+
+#content #datasync #form #auto-refresh-status
+{
+  margin-top: 20px;
+}
+
+#content #datasync #form #auto-refresh-status a
+{
+  background-image: url( ../../img/ico/ui-check-box-uncheck.png );
+  background-position: 0 50%;
+  color: #c0c0c0;
+  display: block;
+  padding-left: 21px;
+}
+
+#content #datasync #form #auto-refresh-status a.on,
+#content #datasync #form #auto-refresh-status a:hover
+{
+  color: #333;
+}
+
+#content #datasync #form #auto-refresh-status a.on
+{
+  background-image: url( ../../img/ico/ui-check-box.png );
+}
+
+#content #datasync .actions div.action
+{
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 5px 5px 10px #c0c0c0;
+  -moz-box-shadow: 5px 5px 10px #c0c0c0;
+  -webkit-box-shadow: 5px 5px 10px #c0c0c0;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  padding: 10px;
+  z-index: 800;
+  display:none;
+  width: 800px;
+}
+
+#content #datasync .actions div.action form .directory-note
+{
+  background-image: url( ../../img/ico/information-white.png );
+  background-position: 22% 1px;
+  color: #c0c0c0;
+}
+
+#content #datasync .actions div.action form .error
+{
+  background-image: url( ../../img/ico/cross-button.png );
+  background-position: 22% 1px;
+  color: #c00;
+  font-weight: bold;
+  display: none;
+}
+
+#content #datasync .actions div.action form p
+{
+  padding-bottom: 8px;
+}
+
+#content #datasync .actions div.action form label
+{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
+  width: 10%;
+}
+
+#content #datasync .actions div.action form textarea
+{
+  float: right;
+  width: 88%;
+  height:400px;
+}
+
+#content #datasync .actions div.action form input,
+#content #datasync .actions div.action form select,
+#content #datasync .actions div.action form .note span
+{
+  float: right;
+  width: 88%;
+}
+
+#content #datasync .actions div.action form .buttons
+{
+  float: right;
+}
+
+#content #datasync .actions div.action form .note span
+{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#content #datasync .actions div.action form .buttons
+{
+  padding-top: 10px;
+}
+
+#content #datasync .actions div.action form button.submit
+{
+  margin-right: 20px;
+}
+
+#content #datasync .actions div.action form button.submit span
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #datasync .actions div.action form button.reset span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #datasync .actions div.config
+{
+  width: 400px;
+}
+
+#content #datasync .actions div.config form label
+{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: right;
+  width: 25%;
+}
+
+#content #datasync .actions div.config form input,
+#content #datasync .actions div.config form select,
+#content #datasync .actions div.config form .note span
+{
+  float: right;
+  width: 71%;
+}
+
+#content #datasync #current_state
+{
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#content #datasync.error #current_state
+{
+  display: none !important;
+}
+
+#content #datasync #current_state .last_update,
+#content #datasync #current_state .info
+{
+  display: block;
+  padding-left: 21px;
+}
+
+#content #datasync #current_state .last_update
+{
+  color: #c0c0c0;
+  font-size: 11px;
+}
+
+#content #datasync #current_state .info
+{
+  background-position: 0 1px;
+  position: relative;
+}
+
+#content #datasync #current_state .info .details span
+{
+  color: #c0c0c0;
+}
+
+#content #datasync #current_state .info .abort-import
+{
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+#content #datasync #current_state .info .abort-import span
+{
+  background-image: url( ../../img/ico/cross.png );
+}
+
+#content #datasync #current_state .info .abort-import.success span
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #datasync #current_state.indexing
+{
+  background-color: #f9f9f9;
+}
+
+#content #datasync #current_state.indexing .info
+{
+  background-image: url( ../../img/ico/hourglass.png );
+}
+
+#content #datasync #current_state.indexing .info .abort-import
+{
+  display: block;
+}
+
+#content #datasync #current_state.success
+{
+  background-color: #e6f3e6;
+}
+
+#content #datasync #current_state.success .info
+{
+  background-image: url( ../../img/ico/tick-circle.png );
+}
+
+#content #datasync #current_state.success .info strong
+{
+  color: #080;
+}
+
+#content #datasync #current_state.aborted
+{
+  background-color: #f3e6e6;
+}
+
+#content #datasync #current_state.aborted .info
+{
+  background-image: url( ../../img/ico/slash.png );
+}
+
+#content #datasync #current_state.aborted .info strong
+{
+  color: #800;
+}
+
+#content #datasync #current_state.failure
+{
+  background-color: #f3e6e6;
+}
+
+#content #datasync #current_state.failure .info
+{
+  background-image: url( ../../img/ico/cross-button.png );
+}
+
+#content #datasync #current_state.failure .info strong
+{
+  color: #800;
+}
+
+#content #datasync #current_state.idle
+{
+  background-color: #e6e6ff;
+}
+
+#content #datasync #current_state.idle .info
+{
+  background-image: url( ../../img/ico/information.png );
+}
+
+#content #datasync #error
+{
+  background-color: #f00;
+  background-image: url( ../../img/ico/construction.png );
+  background-position: 10px 50%;
+  color: #fff;
+  display: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 35px;
+}
+
+#content #datasync #file-content h2
+{
+  border-color: #c0c0c0;
+  padding-left: 5px;
+  position: relative;
+}
+
+#content #datasync #file-content.hidden h2
+{
+  border-color: #fafafa;
+}
+
+#content #datasync #file-content h2 a.toggle
+{
+  background-image: url( ../../img/ico/toggle-small.png );
+  background-position: 0 50%;
+  padding-left: 21px;
+}
+
+#content #datasync #file-content.hidden h2 a.toggle
+{
+  background-image: url( ../../img/ico/toggle-small-expand.png );
+}
+
+#content #datasync #raw_output h2
+{
+  border-color: #c0c0c0;
+  padding-left: 5px;
+  position: relative;
+}
+
+#content #datasync #raw_output.hidden h2
+{
+  border-color: #fafafa;
+}
+
+#content #datasync #raw_output h2 a.toggle
+{
+  background-image: url( ../../img/ico/toggle-small.png );
+  background-position: 0 50%;
+  padding-left: 21px;
+}
+
+#content #datasync #raw_output.hidden h2 a.toggle
+{
+  background-image: url( ../../img/ico/toggle-small-expand.png );
+}
+
+#content #datasync #config h2 a.r
+{
+  background-position: 3px 50%;
+  display: block;
+  float: right;
+  margin-left: 10px;
+  padding-left: 24px;
+  padding-right: 3px;
+}
+
+#content #datasync #config h2 a.reload_config
+{
+  background-image: url( ../../img/ico/arrow-circle.png );
+}
+
+#content #datasync #config h2 a.reload_config.success
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #datasync #config h2 a.reload_config.error
+{
+  background-image: url( ../../img/ico/slash.png );
+}
+
+#content #datasync #config h2 a.debug_mode
+{
+  background-image: url( ../../img/ico/hammer.png );
+  color: #c0c0c0;
+}
+
+#content #datasync #config.debug_mode h2 a.debug_mode
+{
+  background-color: #ff0;
+  background-image: url( ../../img/ico/hammer-screwdriver.png );
+  color: #333;
+}
+
+#content #datasync .block.hidden .content
+{
+  display: none;
+}
+
+#content #datasync #config .content
+{
+  padding: 5px 2px;
+}
+
+#content #datasync #datasync_config .loader
+{
+  background-position: 0 50%;
+  padding-left: 21px;
+}
+
+#content #datasync #datasync_config .formatted
+{
+  border: 1px solid #fff;
+  display: block;
+  padding: 2px;
+}
+
+#content #datasync .debug_mode #datasync_config .formatted
+{
+  display: none;
+}
+
+#content #datasync #datasync_config .editable
+{
+  display: none;
+}
+
+#content #datasync .debug_mode #datasync_config .editable
+{
+  display: block;
+}
+
+#content #datasync #datasync_config .editable textarea
+{
+  font-family: monospace;
+  height: 120px;
+  min-height: 60px;
+  width: 100%;
+}
+
+#content #datasync #debug_response
+{
+  display: none;
+}
+
+#content #datasync #debug_response em
+{
+  color: #c0c0c0;
+  font-style: normal;
+}
+
+
+#content #datasync #data #source-data h2 { background-image: url( ../../img/ico/chart.png ); }
+
+#content #datasync #data #source-data
+{
+  margin-top: 10px;
+}
+
+#content #datasync #data #source-data .table a span.name
+{
+  background-position: 100% 50%;
+  cursor: pointer;
+  padding-right: 21px;
+}
+
+#content #datasync #data #source-data .table a span.name em
+{
+  color: #f00;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#content #datasync #data #source-data .table a:hover span.name
+{
+  background-image: url( ../../img/ico/pencil-small.png );
+}
+
+#content #datasync #data li
+{
+  padding-bottom: 3px;
+  padding-top: 3px;
+  position: relative;
+}
+
+#content #datasync #data li.odd
+{
+  background-color: #f8f8f8;
+}
+
+#content #datasync #data li dt
+{
+  float: left;
+  width: 17%;
+}
+
+#content #datasync #data li dd
+{
+  float: right;
+  width: 82%;
+}
+
+#content #datasync #data li dd.ico
+{
+  background-image: url( ../../img/ico/slash.png );
+  height: 20px;
+}
+
+#content #datasync #data li dd.ico.ico-1
+{
+  background-image: url( ../../img/ico/tick.png );
+}
+
+#content #datasync #data li dd.ico span
+{
+  display: none;
+}
+
+#content #datasync #data #source-data .table a
+{
+  height: 17px;
+  line-height: 17px;
+  padding: 0;
+  width: 90%;
+}
+
+#content #datasync #data #source-data .table a:hover
+{
+  color: #008;
+}
+
+#content #datasync #data #source-data .table .selector-holder
+{
+  position: absolute;
+  top: -2px;
+  z-index: 700;
+}
+
+#content #datasync #data #source-data .table .selector-holder.open
+{
+  background-color: #fff;
+  margin-left: -19px;
+  z-index: 800;
+}
+
+#content #datasync #data #source-data .table .selector-holder { left: 440px; }
+
+#content #datasync #data #source-data .table .selector
+{
+  border: 1px solid transparent;
+  position: relative;
+}
+
+#content #datasync #data #source-data .table .open .selector
+{
+  border-color: #f0f0f0;
+  box-shadow: 5px 5px 10px #c0c0c0;
+  -moz-box-shadow: 5px 5px 10px #c0c0c0;
+  -webkit-box-shadow: 5px 5px 10px #c0c0c0;
+}
+
+#content #datasync #data #source-data .table .selector a
+{
+  display: block;
+  padding: 2px;
+  width: auto;
+}
+
+#content #datasync #data #source-data .table .selector a.trigger
+{
+  padding: 6px;
+}
+
+#content #datasync #data #source-data .table .selector .close
+{
+  display: none;
+}
+
+#content #datasync #data #source-data .table .open .selector .close
+{
+  background-image: url( ../../img/ico/cross-0.png );
+  background-position: 50% 50%;
+  display: block;
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 20px;
+}
+
+#content #datasync #data #source-data .table .open .selector .close:hover
+{
+  background-image: url( ../../img/ico/cross-1.png );
+}
+
+#content #datasync #data #source-data .table .open .selector .close span
+{
+  display: none;
+}
+
+#content #datasync #data #source-data .table .open .selector a.trigger
+{
+  display: none;
+}
+
+#content #datasync #data #source-data .table .selector ul
+{
+  display: none;
+}
+
+#content #datasync #data #source-data .table .open .selector ul
+{
+  display: block;
+}
+
+#content #datasync #data #source-data .table .selector ul li
+{
+  background: none;
+  margin-left: 0;
+}
+
+#content #datasync #data #source-data .table .selector ul li a
+{
+  background-image: url( ../../img/ico/ui-radio-button-uncheck.png );
+  background-position: 2px 50%;
+  padding-left: 21px;
+}
+
+#content #datasync #data #source-data .table .selector ul li a.level
+{
+  background-color: #f0f0f0;
+}
+
+#content #datasync #data #source-data .table .selector ul li a:hover
+{
+  background-image: url( ../../img/ico/ui-radio-button.png );
+}
+
+#content #datasync #data #source-data .table .selector li.unset
+{
+  border-top: 1px solid #f0f0f0;
+}
+
+#content #datasync #data #source-data .table .selector li.unset a
+{
+  background-image: url( ../../img/ico/cross-0.png );
+  background-position: 4px 50%;
+}
+
+#content #datasync #data #source-data .table .selector li.unset a:hover
+{
+  background-image: url( ../../img/ico/cross-1.png );
+  color: #800;
+}
